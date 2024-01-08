@@ -1,0 +1,407 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Merriweather, 'Times New Roman', serif;
+}
+
+h1, h2 {
+    font-size: 46px;
+    padding: 16px 0;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+h4 {
+    font-size: 32px;
+    padding: 12px 0;
+    margin: 24px 0;
+}
+
+h5 {
+    font-size: 32px;
+    padding: 12px 0;
+}
+
+h6 {
+    font-size: 32px;
+    line-height: 1.5;
+    padding: 12px 0;
+}
+
+p {
+    margin: 12px 0;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+.outer-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.inner-content-container {
+    flex-basis: 1400px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.outer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-container {
+    border: 1px dotted black;
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: 20px 0;
+    margin: 0 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    background-color: #4845E4;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    list-style-type: none;
+}
+
+nav ul {
+    flex-basis: 400px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-content {
+    padding: 100px 0;
+    margin-bottom: 88px;
+    font-size: 28px;
+    max-width: 850px;
+    text-align: center;
+}
+
+.header-content button {
+    background-color: #ED4385;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 5px 8px 4px rgba(0, 0, 0, .2);
+    padding: 25px 40px;
+    margin: 28px 0;
+}
+
+.squiggle {
+    display: block;
+    margin: 60px 0 0 0;
+    position: absolute;
+    bottom: 0;
+    width: 78px;
+    height: 100px;
+    left: calc(50% - 39px);
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+ .intro {
+     background-color: white;
+     color: #5722CD;
+     max-width: 850px;
+     text-align: center;
+ }
+
+.intro-link {
+    color: #0c0c0c;
+    font-weight: 500;
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+/* --------------- 4.3 Work --------------------------- */
+#projects {
+    background-color: #F3F6F9;
+}
+
+.project-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 100px 0;
+}
+
+.project-article:nth-of-type(odd) {
+    flex-direction: row-reverse;
+}
+
+.project-article__image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.project-article__image-wrapper img {
+    width: 100%;
+    box-shadow: 0 32px 28px -10px rgba(0, 0, 0, 0.22);
+}
+
+.project-info {
+    flex-basis: 480px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 0 100px 50px 50px;
+}
+
+.project-squiggle {
+    margin-top: 24px;
+    margin-bottom: 50px;
+    width: 57px;
+    height: 6px;
+    background-image: url("../assets/squiggle_line.svg");
+}
+
+.project-article__info-container p {
+    font-weight: 400;
+    margin: 50px 0;
+}
+
+.project-link {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #5722CD;
+    padding-top: 50px;
+    display: inline-block;
+}
+
+/* --------------- 4.4 Services------------------------ */
+
+#services {
+    background-color: white;
+}
+
+#services > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.service-tile {
+    flex-basis: 384px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid #5722CD;
+    box-shadow: 0 11px 16px 0 rgba(0, 0, 0, 0.1);
+    color: #7A7A7A;
+    font-size: 16px;
+    align-self: stretch;
+}
+
+h5 {
+    color: #5722CD;
+    font-size: 24px;
+}
+
+.service-icon {
+    width: 80px;
+}
+
+/* --------------- 4.5 Contact ------------------------ */
+
+#contact {
+    background: #4B49E8;
+    background: linear-gradient(129deg, #4B49E8 0%, #4B49E8 26%, #5722CD  100%);
+    color: white;
+    position: relative;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    align-items: center;
+}
+
+.contact-content input,
+.contact-content textarea {
+    background-color: #ffffff;
+    border: 1px solid #7A7A7A;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    display: block;
+    font-size: 16px;
+    color: #7A7A7A;
+    width: 100%;
+}
+
+.contact-content input::placeholder,
+.contact-content textarea::placeholder {
+    color: #7A7A7A;
+}
+
+.contact-content label {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 20px 0;
+    max-width: 850px;
+    width: 100%;
+    text-align: left;
+}
+
+.contact-content button {
+    width: 200px;
+    align-self: center;
+    background-color: #ED4385;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 5px 8px 4px rgba(0, 0, 0, .2);
+    padding: 25px 40px;
+    margin: 28px 0;
+}
+
+/* ------------------------------- 4.6 Footer -------------------------------- */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px) {
+    h1, h2 {
+        font-size: 36px;
+        padding: 16px 0;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+
+    h5 {
+        color: #5722CD;
+        font-size: 24px;
+    }
+
+    h6 {
+        font-size: 22px;
+        line-height: 1.5;
+        padding: 12px 0;
+    }
+
+    .header-content__navigation {
+        justify-content: center;
+    }
+
+    .header-content__navigation a {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .intro__link {
+        margin: 50px 0 0 0;
+    }
+
+    .project-article:nth-of-type(odd),
+    .project-article {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .project-article-image {
+        flex-basis: auto;
+    }
+
+    .project-article-info {
+        padding: 0 0 50px 0;
+        flex-basis: auto;
+    }
+
+    #services > div {
+        padding: 100px 0 50px 0;
+    }
+}
